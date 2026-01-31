@@ -22,18 +22,18 @@ AlgoViz.VisualizationEngine = class {
 
         // Color scheme
         this.colors = {
-            default: '#a855f7',
-            comparing: '#f59e0b',
-            swapping: '#ef4444',
-            sorted: '#22c55e',
-            current: '#3b82f6',
-            visited: '#8b5cf6',
-            path: '#22c55e',
-            wall: '#3f3f46',
-            start: '#22c55e',
-            end: '#ef4444',
-            background: '#18181b',
-            text: '#fafafa'
+            default: '#bf5af2',
+            comparing: '#ffd60a',
+            swapping: '#ff453a',
+            sorted: '#30d158',
+            current: '#0a84ff',
+            visited: '#5e5ce6',
+            path: '#30d158',
+            wall: '#3a3a3c',
+            start: '#30d158',
+            end: '#ff453a',
+            background: '#141415',
+            text: '#ececf1'
         };
 
         this.resizeCanvas();
