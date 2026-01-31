@@ -2,7 +2,9 @@
  * Sorting algorithm visualizer
  */
 
-export class SortingVisualizer {
+var AlgoViz = AlgoViz || {};
+
+AlgoViz.SortingVisualizer = class {
     constructor(engine) {
         this.engine = engine;
         this.array = [];
@@ -303,6 +305,4 @@ export class SortingVisualizer {
 
         return i + 1;
     }
-}
-
-export default SortingVisualizer;
+};

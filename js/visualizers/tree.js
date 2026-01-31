@@ -2,7 +2,9 @@
  * Binary Search Tree and Tree Traversal visualizer
  */
 
-class TreeNode {
+var AlgoViz = AlgoViz || {};
+
+AlgoViz.TreeNode = class {
     constructor(value) {
         this.value = value;
         this.left = null;
@@ -11,9 +13,9 @@ class TreeNode {
         this.y = 0;
         this.state = 'default'; // default, current, visited, found
     }
-}
+};
 
-export class TreeVisualizer {
+AlgoViz.TreeVisualizer = class {
     constructor(engine) {
         this.engine = engine;
         this.root = null;
@@ -42,7 +44,7 @@ export class TreeVisualizer {
     }
 
     insert(value) {
-        const newNode = new TreeNode(value);
+        const newNode = new AlgoViz.TreeNode(value);
 
         if (!this.root) {
             this.root = newNode;
@@ -395,6 +397,4 @@ export class TreeVisualizer {
             if (node.right) queue.push(node.right);
         }
     }
-}
-
-export default TreeVisualizer;
+};

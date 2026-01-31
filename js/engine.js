@@ -2,7 +2,10 @@
  * Core visualization engine for algorithm animations
  */
 
-export class VisualizationEngine {
+// Global namespace
+var AlgoViz = AlgoViz || {};
+
+AlgoViz.VisualizationEngine = class {
     constructor(canvas) {
         this.canvas = canvas;
         this.ctx = canvas.getContext('2d');
@@ -208,6 +211,4 @@ export class VisualizationEngine {
             ? 4 * t * t * t
             : 1 - Math.pow(-2 * t + 2, 3) / 2;
     }
-}
-
-export default VisualizationEngine;
+};

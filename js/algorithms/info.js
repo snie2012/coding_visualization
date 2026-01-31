@@ -2,7 +2,9 @@
  * Algorithm information, descriptions, and pseudocode
  */
 
-export const algorithmInfo = {
+var AlgoViz = AlgoViz || {};
+
+AlgoViz.algorithmInfo = {
     // Sorting Algorithms
     bubble: {
         name: 'Bubble Sort',
@@ -287,5 +289,3 @@ function levelOrder(root):
     return dp[n][W]`
     }
 };
-
-export default algorithmInfo;

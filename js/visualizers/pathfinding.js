@@ -2,7 +2,9 @@
  * Pathfinding algorithm visualizer (BFS, DFS, A*, Dijkstra)
  */
 
-export class PathfindingVisualizer {
+var AlgoViz = AlgoViz || {};
+
+AlgoViz.PathfindingVisualizer = class {
     constructor(engine) {
         this.engine = engine;
         this.grid = [];
@@ -463,6 +465,4 @@ export class PathfindingVisualizer {
         this.grid[this.end.row][this.end.col] = this.END;
         this.draw();
     }
-}
-
-export default PathfindingVisualizer;
+};

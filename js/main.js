@@ -2,25 +2,19 @@
  * Main entry point - Algorithm Visualizer
  */
 
-import { VisualizationEngine } from './engine.js';
-import { SortingVisualizer } from './visualizers/sorting.js';
-import { PathfindingVisualizer } from './visualizers/pathfinding.js';
-import { TreeVisualizer } from './visualizers/tree.js';
-import { GraphVisualizer } from './visualizers/graph.js';
-import { DPVisualizer } from './visualizers/dp.js';
-import { algorithmInfo } from './algorithms/info.js';
+var AlgoViz = AlgoViz || {};
 
-class AlgorithmVisualizerApp {
+AlgoViz.App = class {
     constructor() {
         this.canvas = document.getElementById('canvas');
-        this.engine = new VisualizationEngine(this.canvas);
+        this.engine = new AlgoViz.VisualizationEngine(this.canvas);
 
         // Initialize visualizers
-        this.sorting = new SortingVisualizer(this.engine);
-        this.pathfinding = new PathfindingVisualizer(this.engine);
-        this.tree = new TreeVisualizer(this.engine);
-        this.graph = new GraphVisualizer(this.engine);
-        this.dp = new DPVisualizer(this.engine);
+        this.sorting = new AlgoViz.SortingVisualizer(this.engine);
+        this.pathfinding = new AlgoViz.PathfindingVisualizer(this.engine);
+        this.tree = new AlgoViz.TreeVisualizer(this.engine);
+        this.graph = new AlgoViz.GraphVisualizer(this.engine);
+        this.dp = new AlgoViz.DPVisualizer(this.engine);
 
         this.currentAlgo = null;
         this.currentVisualizer = null;
@@ -175,7 +169,7 @@ class AlgorithmVisualizerApp {
     }
 
     updateInfoPanel(algo) {
-        const info = algorithmInfo[algo];
+        const info = AlgoViz.algorithmInfo[algo];
         if (info) {
             document.getElementById('algo-name').textContent = info.name;
             document.getElementById('algo-description').innerHTML =
@@ -326,9 +320,9 @@ class AlgorithmVisualizerApp {
         document.getElementById('btn-play').disabled = false;
         document.getElementById('btn-pause').disabled = true;
     }
-}
+};
 
 // Initialize app when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    window.app = new AlgorithmVisualizerApp();
+    window.app = new AlgoViz.App();
 });

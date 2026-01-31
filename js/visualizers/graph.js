@@ -2,7 +2,9 @@
  * Graph visualizer for graph algorithms
  */
 
-class GraphNode {
+var AlgoViz = AlgoViz || {};
+
+AlgoViz.GraphNode = class {
     constructor(id, x, y) {
         this.id = id;
         this.x = x;
@@ -10,9 +12,9 @@ class GraphNode {
         this.state = 'default'; // default, current, visited, inStack
         this.neighbors = [];
     }
-}
+};
 
-export class GraphVisualizer {
+AlgoViz.GraphVisualizer = class {
     constructor(engine) {
         this.engine = engine;
         this.nodes = [];
@@ -39,7 +41,7 @@ export class GraphVisualizer {
             const angle = (2 * Math.PI * i) / nodeCount - Math.PI / 2;
             const x = centerX + radius * Math.cos(angle);
             const y = centerY + radius * Math.sin(angle);
-            this.nodes.push(new GraphNode(i, x, y));
+            this.nodes.push(new AlgoViz.GraphNode(i, x, y));
         }
 
         // Create random edges (ensuring connectivity)
@@ -248,6 +250,4 @@ export class GraphVisualizer {
             await this.engine.sleep();
         }
     }
-}
-
-export default GraphVisualizer;
+};

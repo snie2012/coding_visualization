@@ -98,6 +98,14 @@
         </div>
     </main>
 
-    <script type="module" src="js/main.js"></script>
+    <!-- Load scripts in correct order (no ES6 modules for file:// compatibility) -->
+    <script src="js/engine.js"></script>
+    <script src="js/algorithms/info.js"></script>
+    <script src="js/visualizers/sorting.js"></script>
+    <script src="js/visualizers/pathfinding.js"></script>
+    <script src="js/visualizers/tree.js"></script>
+    <script src="js/visualizers/graph.js"></script>
+    <script src="js/visualizers/dp.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

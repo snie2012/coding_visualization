@@ -2,7 +2,9 @@
  * Dynamic Programming visualizer (Fibonacci, Knapsack)
  */
 
-export class DPVisualizer {
+var AlgoViz = AlgoViz || {};
+
+AlgoViz.DPVisualizer = class {
     constructor(engine) {
         this.engine = engine;
         this.cells = [];
@@ -284,6 +286,4 @@ export class DPVisualizer {
             );
         }
     }
-}
-
-export default DPVisualizer;
+};
