@@ -20,20 +20,20 @@ AlgoViz.VisualizationEngine = class {
             startTime: 0
         };
 
-        // Color scheme
+        // Color scheme (light theme)
         this.colors = {
-            default: '#7c3aed',
-            comparing: '#f59e0b',
-            swapping: '#ef4444',
-            sorted: '#10b981',
-            current: '#3b82f6',
+            default: '#2563eb',
+            comparing: '#d97706',
+            swapping: '#dc2626',
+            sorted: '#16a34a',
+            current: '#0891b2',
             visited: '#8b5cf6',
-            path: '#10b981',
-            wall: '#1e293b',
-            start: '#10b981',
-            end: '#ef4444',
-            background: '#1a1a2e',
-            text: '#f8fafc'
+            path: '#16a34a',
+            wall: '#374151',
+            start: '#16a34a',
+            end: '#dc2626',
+            background: '#ffffff',
+            text: '#1f2937'
         };
 
         this.resizeCanvas();
