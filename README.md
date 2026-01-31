@@ -1,5 +1,7 @@
 # AlgoViz - Algorithm Visualizer
 
+**[Live Demo](https://snie2012.github.io/coding_visualization/)**
+
 An interactive web-based tool for visualizing common algorithms and data structures. Built with vanilla JavaScript and HTML5 Canvas for smooth, performant animations.
 
 ## Features
@@ -70,7 +72,7 @@ coding_visualization/
 ## Technical Details
 
 - **No external dependencies** - Pure vanilla JavaScript
-- **ES6 Modules** - Clean, modular code organization
+- **No build step required** - Just open index.html in a browser
 - **HTML5 Canvas** - Smooth, hardware-accelerated rendering
 - **Responsive design** - Works on various screen sizes
 - **Dark theme** - Easy on the eyes for extended use
@@ -78,7 +80,6 @@ coding_visualization/
 ## Browser Support
 
 Works in all modern browsers that support:
-- ES6 Modules
 - HTML5 Canvas
 - CSS Grid/Flexbox
 
